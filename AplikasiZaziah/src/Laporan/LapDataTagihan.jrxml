@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4ff15dfe-a7bb-4147-83d7-08f3228885f0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[SELECT
+     datatagihan.`id_pelanggan` AS datatagihan_id_pelanggan,
+     datatagihan.`nama_pelanggan` AS datatagihan_nama_pelanggan,
+     datatagihan.`no_tlp` AS datatagihan_no_tlp,
+     datatagihan.`alamat` AS datatagihan_alamat,
+     datatagihan.`id_lapangan` AS datatagihan_id_lapangan,
+     datatagihan.`no_lapangan` AS datatagihan_no_lapangan,
+     datatagihan.`tipe_lapangan` AS datatagihan_tipe_lapangan,
+     datatagihan.`harga` AS datatagihan_harga,
+datatagihan.`jam` AS datatagihan_jam,
+     datatagihan.`tanggal_masuk` AS datatagihan_tanggal_masuk,
+     datatagihan.`status` AS datatagihan_status
+FROM
+     `datatagihan` datatagihan]]>
+	</queryString>
+	<field name="datatagihan_id_pelanggan" class="java.lang.String"/>
+	<field name="datatagihan_nama_pelanggan" class="java.lang.String"/>
+	<field name="datatagihan_no_tlp" class="java.lang.String"/>
+	<field name="datatagihan_alamat" class="java.lang.String"/>
+	<field name="datatagihan_id_lapangan" class="java.lang.String"/>
+	<field name="datatagihan_no_lapangan" class="java.lang.String"/>
+	<field name="datatagihan_tipe_lapangan" class="java.lang.String"/>
+	<field name="datatagihan_harga" class="java.lang.String"/>
+	<field name="datatagihan_jam" class="java.lang.String"/>
+	<field name="datatagihan_tanggal_masuk" class="java.lang.String"/>
+	<field name="datatagihan_status" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="190" splitType="Stretch">
+			<frame>
+				<reportElement uuid="c175c15c-4798-4ad9-b49f-a63a048c3c1a" mode="Opaque" x="0" y="166" width="802" height="24" forecolor="#D0B48E" backcolor="#000000"/>
+			</frame>
+			<rectangle>
+				<reportElement uuid="5103c91b-3a55-46b4-9720-f6a6f1bfde6b" x="0" y="0" width="802" height="166" backcolor="#990000"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="0b00717b-7692-4e06-bc1e-8645bcadb7d0" x="291" y="84" width="387" height="69" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="Showcard Gothic" size="20"/>
+				</textElement>
+				<text><![CDATA[Jl.H.Rijin, Tugu, Kec. Cimanggis, Kota Depok, Jawa Barat 16451]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0b00717b-7692-4e06-bc1e-8645bcadb7d0" x="291" y="29" width="387" height="66" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="Showcard Gothic" size="40"/>
+				</textElement>
+				<text><![CDATA[GOR SHANINAZA]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="3bbee965-32b9-48fb-af63-c9e24da8adb8" x="89" y="19" width="157" height="124"/>
+				<imageExpression><![CDATA["D:\\Zaziah\\TUGAS AKHIR\\Aplikasi Zaziah\\AplikasiZaziah\\src\\Image\\Logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="19" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="ce4d3193-5660-4676-b621-03c433b276f9" style="Column header" x="3" y="0" width="67" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[ID Pelanggan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1026beac-4ffb-490b-b8a2-42996d4fb872" style="Column header" x="70" y="0" width="100" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nama Pelanggan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b429cdf7-fa58-455f-b872-8885dbc895cb" style="Column header" x="170" y="0" width="76" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[No Telpon]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e5161304-fa92-4583-b72b-f6a3212e4734" style="Column header" x="246" y="0" width="86" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9af9b732-130d-4af5-8005-035c29ce45fe" style="Column header" x="403" y="1" width="80" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[No Lapangan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9aafca91-fec7-4353-a03f-d0168d4d8d09" style="Column header" x="532" y="0" width="58" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Harga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6844efe7-1ff3-4031-9edc-c3287bac6693" style="Column header" x="727" y="0" width="75" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2af5b59b-bfa9-466a-9f2b-21f17f549c44" style="Column header" x="332" y="1" width="71" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Id Lapangan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4254ff28-f94b-4027-b3be-7c7cb8b74d61" style="Column header" x="483" y="0" width="49" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tipe Lapangan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ea538305-566e-4f5c-b828-5a10744f04db" x="658" y="0" width="69" height="18"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Tanggal Masuk]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8811d560-3124-4c6a-a922-b793a9f984ad" x="590" y="1" width="68" height="17"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Jam]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement uuid="f293ac62-4d35-4bd5-bcc4-f465146286f6" x="3" y="0" width="67" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datatagihan_id_pelanggan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8acba8ef-f0ed-4af2-ab84-1b2d42e44bb2" x="70" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datatagihan_nama_pelanggan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="acc2d35a-06ac-4a59-a222-16c42689c189" x="170" y="0" width="76" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datatagihan_no_tlp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="16da4ba9-7eed-46ac-a621-e2ba45cc6e61" x="332" y="1" width="71" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datatagihan_id_lapangan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c0cd1d82-bc61-411d-b55b-b54332c72148" x="532" y="1" width="58" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datatagihan_harga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="115ec6e8-c296-4bdd-a764-9dccaa116e5c" x="727" y="0" width="75" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datatagihan_status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d50d332f-c868-49ed-ae07-b54649e49568" x="658" y="1" width="69" height="19"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datatagihan_tanggal_masuk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b1fa2e3f-d6a8-4856-b9bb-4c819486cad4" x="246" y="0" width="86" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datatagihan_alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="28baf04f-1ca6-45b5-8b02-d9ec737275d7" x="403" y="0" width="80" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datatagihan_no_lapangan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8ddc893c-cfbf-46c2-a0c9-4f3142e70683" x="483" y="1" width="49" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datatagihan_tipe_lapangan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5ebbb112-2c00-4468-9c63-6f6cecd9b7ae" x="590" y="2" width="68" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datatagihan_jam}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="254" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="89520bc3-ac92-44a0-bc43-5a26e62201f0" style="Column header" x="646" y="157" width="113" height="20" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("'Depok, 'EEEE dd MMMM yyyy", new Locale("id", "ID")).format(new Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="e46fd43a-41b7-4d95-9281-df447582a6ea" style="SubTitle" x="621" y="225" width="158" height="29" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Pak Arif Rahman]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="0b75479b-ab29-4a5e-99e9-85ce7b525307" style="Column header" x="2" y="3" width="197" height="20" forecolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

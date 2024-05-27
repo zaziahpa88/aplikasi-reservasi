@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a437d7bc-10b6-4ecc-be14-035307316388">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[SELECT
+     datakaryawan.`id_karyawan` AS datakaryawan_id_karyawan,
+     datakaryawan.`nama_karyawan` AS datakaryawan_nama_karyawan,
+     datakaryawan.`jenis_kelamin` AS datakaryawan_jenis_kelamin,
+     datakaryawan.`no_tlp` AS datakaryawan_no_tlp,
+     datakaryawan.`alamat` AS datakaryawan_alamat
+FROM
+     `datakaryawan` datakaryawan]]>
+	</queryString>
+	<field name="datakaryawan_id_karyawan" class="java.lang.String"/>
+	<field name="datakaryawan_nama_karyawan" class="java.lang.String"/>
+	<field name="datakaryawan_jenis_kelamin" class="java.lang.String"/>
+	<field name="datakaryawan_no_tlp" class="java.lang.String"/>
+	<field name="datakaryawan_alamat" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="157" splitType="Stretch">
+			<frame>
+				<reportElement uuid="c175c15c-4798-4ad9-b49f-a63a048c3c1a" mode="Opaque" x="0" y="121" width="555" height="24" forecolor="#D0B48E" backcolor="#000000"/>
+			</frame>
+			<rectangle>
+				<reportElement uuid="5103c91b-3a55-46b4-9720-f6a6f1bfde6b" x="0" y="0" width="555" height="121" backcolor="#990000"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="0b00717b-7692-4e06-bc1e-8645bcadb7d0" x="182" y="0" width="342" height="55" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="Showcard Gothic" size="40"/>
+				</textElement>
+				<text><![CDATA[GOR SHANINAZA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0b00717b-7692-4e06-bc1e-8645bcadb7d0" x="182" y="55" width="342" height="58" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="Showcard Gothic" size="20"/>
+				</textElement>
+				<text><![CDATA[Jl.H.Rijin, Tugu, Kec. Cimanggis, Kota Depok, Jawa Barat 16451]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="3bbee965-32b9-48fb-af63-c9e24da8adb8" x="32" y="0" width="124" height="113"/>
+				<imageExpression><![CDATA["D:\\Zaziah\\TUGAS AKHIR\\Aplikasi Zaziah\\AplikasiZaziah\\src\\Image\\Logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="e459d37b-4ed9-4770-b986-aca572a07fa7" style="Column header" x="0" y="7" width="111" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[ID Karyawan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="61c044a8-e0f6-4549-836c-972de0828710" style="Column header" x="111" y="7" width="111" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nama Karyawan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="edf0ce3f-2391-4620-aca1-a7dda3927963" style="Column header" x="222" y="7" width="111" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Jenis Kelamin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6130a5a2-a046-4aa3-9ecf-c2b680805df7" style="Column header" x="333" y="7" width="111" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[No Telpon]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0daf48a2-0f1e-4f25-94b6-37cdefe52b22" style="Column header" x="444" y="7" width="111" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement uuid="82cc442b-2224-4f72-b5a7-b48ba7419dbd" x="0" y="0" width="111" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datakaryawan_id_karyawan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7dfa17d8-22a8-495f-9321-c463fa6c6652" x="111" y="0" width="111" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datakaryawan_nama_karyawan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="36f6d250-248c-44b6-8101-f6e2d426ee13" x="222" y="0" width="111" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datakaryawan_jenis_kelamin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="772500c4-0fbe-4620-9c48-862ddb50e99d" x="333" y="0" width="111" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datakaryawan_no_tlp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e1444b95-8e6d-4ab2-b758-c8d1e934cf11" x="444" y="0" width="111" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datakaryawan_alamat}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch">
+			<line>
+				<reportElement uuid="01fb2427-632c-440b-b1c2-194bb3ae91da" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="220" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="6bafc94f-bb91-4f74-b5bb-120d179a329f" style="Column header" x="385" y="125" width="139" height="20" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("'Depok, 'EEEE dd MMMM yyyy", new Locale("id", "ID")).format(new Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="2a8c5431-a5d3-4e13-a93b-236d661e66eb" style="SubTitle" x="379" y="178" width="145" height="29" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Pak Arif Rahman]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

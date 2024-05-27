@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="30d5144a-f0bc-4483-aac9-e8c690e98b0a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#73E6E6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#CFE6E6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#00FFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<parameter name="id_pelanggan" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     datapembayaran.`id_pelanggan` AS datapembayaran_id_pelanggan,
+     datapembayaran.`nama_pelanggan` AS datapembayaran_nama_pelanggan,
+     datapembayaran.`no_tlp` AS datapembayaran_no_tlp,
+     datapembayaran.`alamat` AS datapembayaran_alamat,
+     datapembayaran.`id_lapangan` AS datapembayaran_id_lapangan,
+     datapembayaran.`no_lapangan` AS datapembayaran_no_lapangan,
+     datapembayaran.`tipe_lapangan` AS datapembayaran_tipe_lapangan,
+     datapembayaran.`harga` AS datapembayaran_harga,
+datapembayaran.`jam` AS datapembayaran_jam,
+datapembayaran.`tanggal_masuk` AS datapembayaran_tanggal_masuk,
+     datapembayaran.`status` AS datapembayaran_status
+FROM
+     `datapembayaran` datapembayaran
+WHERE
+     `datapembayaran`.`id_pelanggan` = $P{id_pelanggan}]]>
+	</queryString>
+	<field name="datapembayaran_id_pelanggan" class="java.lang.String"/>
+	<field name="datapembayaran_nama_pelanggan" class="java.lang.String"/>
+	<field name="datapembayaran_no_tlp" class="java.lang.String"/>
+	<field name="datapembayaran_alamat" class="java.lang.String"/>
+	<field name="datapembayaran_id_lapangan" class="java.lang.String"/>
+	<field name="datapembayaran_no_lapangan" class="java.lang.String"/>
+	<field name="datapembayaran_tipe_lapangan" class="java.lang.String"/>
+	<field name="datapembayaran_harga" class="java.lang.String"/>
+	<field name="datapembayaran_jam" class="java.lang.String"/>
+	<field name="datapembayaran_tanggal_masuk" class="java.lang.String"/>
+	<field name="datapembayaran_status" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="149" splitType="Stretch">
+			<frame>
+				<reportElement uuid="4f932eed-7606-4093-8167-307cb0c45684" mode="Opaque" x="0" y="121" width="555" height="24" forecolor="#D0B48E" backcolor="#000000"/>
+			</frame>
+			<rectangle>
+				<reportElement uuid="5103c91b-3a55-46b4-9720-f6a6f1bfde6b" x="0" y="0" width="555" height="121" backcolor="#990000"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="0b00717b-7692-4e06-bc1e-8645bcadb7d0" x="168" y="10" width="345" height="55" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="Showcard Gothic" size="40"/>
+				</textElement>
+				<text><![CDATA[GOR SHANINAZA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0b00717b-7692-4e06-bc1e-8645bcadb7d0" x="168" y="65" width="345" height="56" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="Showcard Gothic" size="20"/>
+				</textElement>
+				<text><![CDATA[Jl.H.Rijin, Tugu, Kec. Cimanggis, Kota Depok, Jawa Barat 16451]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="3bbee965-32b9-48fb-af63-c9e24da8adb8" x="27" y="7" width="124" height="113"/>
+				<imageExpression><![CDATA["D:\\Zaziah\\TUGAS AKHIR\\Aplikasi Zaziah\\AplikasiZaziah\\src\\Image\\Logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<detail>
+		<band height="162" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="8788b2c0-f0cf-41d2-8993-7bd8d1d814cd" x="0" y="0" width="111" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[ID Pelanggan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="04340ba9-f272-4b43-90ba-10ab62f4bde1" x="111" y="0" width="111" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Nama Pelanggan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2250d0a0-6210-4b37-92fe-62a860b976e7" x="222" y="0" width="111" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[No Telpon]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9d23295d-eef7-444b-a3bc-c974d186afc6" x="444" y="0" width="111" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="220df07e-b948-42d5-9a30-653c6ae8474e" x="0" y="50" width="111" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[ID Lapangan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f0dda3fa-febb-4f74-b96b-63d9a13f33f6" x="111" y="50" width="111" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[No Lapangan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fc081725-bd70-4349-8642-60ff75f2b108" x="222" y="50" width="111" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Tipe Lapangan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d899d8f5-b57e-470a-93e1-03da0471f4ad" x="444" y="50" width="111" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Harga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b788a8c5-90da-4b49-ae0a-49faab7a00e6" x="27" y="134" width="187" height="28"/>
+				<textElement markup="none">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Status Pembayaran :]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="a8298720-ff3a-4b5f-a8cb-63165b827192" x="111" y="20" width="111" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datapembayaran_nama_pelanggan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="88524a56-fd96-4ba1-93dc-70430d5a5038" x="222" y="20" width="111" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datapembayaran_no_tlp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5952e1ec-a27a-481e-a3e5-864e13d05ee1" x="444" y="20" width="111" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datapembayaran_alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1f169ff2-60d4-468a-927d-111fd1d1f44a" x="0" y="70" width="111" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datapembayaran_id_lapangan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8ef4542c-346b-49ef-96cc-1abe0618ebd2" x="111" y="70" width="111" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datapembayaran_no_lapangan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a8b4d069-2890-4e44-a11f-034aff656b79" x="222" y="70" width="111" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datapembayaran_tipe_lapangan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d9742059-9b7a-429e-874f-debc11347a5f" x="444" y="70" width="111" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datapembayaran_harga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="37046a16-4900-4f28-a23e-43d9d6e9124d" x="214" y="134" width="146" height="28"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{datapembayaran_status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="95c1c42e-04f9-4395-b660-465e510cf8b4" x="0" y="20" width="111" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datapembayaran_id_pelanggan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="b842946f-f64c-4495-a2f3-330de6da1baf" x="360" y="0" width="84" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Tanggal Masuk]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="510270d2-e352-42cc-9050-f78d442ca737" x="360" y="20" width="84" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datapembayaran_tanggal_masuk}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="f6113885-8007-44fa-9670-099da0233584" x="360" y="50" width="84" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Jam]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="91708695-49b0-4056-a28d-2c0866824a86" x="360" y="70" width="84" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{datapembayaran_jam}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement uuid="2e41b088-84a0-4312-b672-3bfdc43986d6" x="372" y="6" width="141" height="20"/>
+				<textElement markup="none"/>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("'Jakarta, 'EEEE dd MMMM yyyy", new Locale("id", "ID")).format(new Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="e3d59aa4-fa83-4dbc-9714-15303aa64114" x="316" y="6" width="56" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Tanggal :]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
